@@ -14,13 +14,15 @@
     <form id="form">
       <div>
         <label for="numeroa">Número A</label>
-        <input type="number" name="numeroa" id="numeroa">
+        <input type="number" name="numeroa" id="numeroa" min="0">
       </div>
       <div>
         <label for="numerob">Número B</label>
-        <input type="number" name="numerob" id="numerob">
+        <input type="number" name="numerob" id="numerob" min="0">
       </div>
       <input type="submit" value="Vamos ver!">
+      <p class="erro">Preencha todos os campos.</p>
+      <p class="mensagem">Preencha todos os campos.</p>
     </form>
   </div>
   <script src="./script.js"></script>

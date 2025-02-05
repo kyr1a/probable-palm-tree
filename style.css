@@ -1,3 +1,7 @@
+body, input {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -9,6 +13,9 @@ form {
 
 input[type="submit"] {
   width: 250px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 550;
 }
 
 h1 {
@@ -18,4 +25,28 @@ h1 {
 span {
   display: inline-block;
   margin: 0 auto;
+}
+
+.erro {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  display: none;
+  width: 60%;
+  border-radius: 2px;
+}
+
+.mensagem {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  display: none;
+  background-color: forestgreen;
+  color: white;
+  border-radius: 2px;
+  width: 60%;
 }
