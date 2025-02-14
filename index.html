@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-bt">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Números</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="preconnect" href="http://fonts.googleapis.com">
+    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+
 </head>
 
 <body>
-  <div>
-    <h1>O número B é maior que o número A?</h1>
-    <form id="form">
-      <div>
-        <label for="numeroa">Número A</label>
-        <input type="number" name="numeroa" id="numeroa" min="0">
-      </div>
-      <div>
-        <label for="numerob">Número B</label>
-        <input type="number" name="numerob" id="numerob" min="0">
-      </div>
-      <input type="submit" value="Vamos ver!">
-      <p class="erro">Preencha todos os campos.</p>
-      <p class="mensagem">Preencha todos os campos.</p>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <form>
+        <h2>Inserir nova tarefa</h2>
+        <div id="interacao">
+            <input type="text" id="input" required placeholder="Nova tarefa">
+            <div>
+                <button type="submit">Adicionar</button>
+                <button id="limpar" type="reset">Limpar</button>
+            </div>
+        </div>
     </form>
-  </div>
-  <script src="./script.js"></script>
+    <ul id="lista">
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
