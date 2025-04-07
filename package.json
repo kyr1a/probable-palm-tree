@@ -1,16 +1,19 @@
 {
-  "name": "less",
+  "name": "grunt",
   "version": "1.0.0",
   "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "less": "less-watch-compiler ./src/styles ./build/styles main.less",
+    "grunt": "grunt",
+    "build": "grunt build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "less": "^4.2.2",
-    "less-watch-compiler": "^1.16.3"
+    "grunt": "^1.6.1",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-uglify": "^5.2.2"
   }
 }
