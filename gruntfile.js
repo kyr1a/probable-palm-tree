@@ -2,11 +2,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     less: {
-      files: {
-        "main.css": "main.less"
-      },
-      options: {
-        compress: true
+      minification: {
+        options: {
+          compress: true
+        },
+        files: {
+          "main.min.css": "main.less"
+        }
       }
     },
     uglify: {
@@ -17,9 +19,10 @@ module.exports = function (grunt) {
       }
     }
   });
+
+  grunt.loadNpmTasks("grunt-contrib-less");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+
+  grunt.registerTask("minificar", ["less", "uglify"]);
+  grunt.registerTask("default", ["minificar"]);
 };
-
-grunt.loadNpmTasks("grunt-contrib-less");
-grunt.loadNpmTasks("grunt-contrib-uglify");
-
-grunt.registerTask("default", ["grunt-contrib-less", "grunt-contrib-uglify"]);
