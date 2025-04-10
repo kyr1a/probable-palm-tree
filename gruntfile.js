@@ -23,6 +23,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-less");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
-  grunt.registerTask("minificar", ["less", "uglify"]);
-  grunt.registerTask("default", ["minificar"]);
+  grunt.registerTask("build", ["less", "uglify"]);
+  grunt.registerTask("default", ["build"]);
 };
